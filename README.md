@@ -15,10 +15,10 @@ with sometimes few years inbetween, hence the duplicated and messy code :)
 
 ### Supported Brainfuck variants
 
-* regular BF code, wrapped (by default 8 bit, can be changed in code)
+* regular BF code, wrapped memory (by default 8 bit, can be changed in code)
 * brainloller and braincopter (BF embedded into image file) - only uncompressed
   PNG supported
-* passes most of 
+* passes most of
   [compiler tests] (http://www.hevanet.com/cristofd/brainfuck/tests.b)
 
 ### Language templates
@@ -33,13 +33,13 @@ with sometimes few years inbetween, hence the duplicated and messy code :)
 * Move, multiply and reset transformed into single operation
 * Dead code elimination
 * Value and pointer tracking when code is not too complicated
-* Can simplify 
-  [Hello world!] (http://esoteric.sange.fi/brainfuck/bf-source/prog/) programs 
+* Can simplify
+  [Hello world!] (http://esoteric.sange.fi/brainfuck/bf-source/prog/) programs
   into `print ("Hello world!")`
 
 ## Usage
 
-Always creates `pybf.py` file right inside `src` dir, so make sure it's 
+Always creates `pybf.py` file right inside `src` dir, so make sure it's
 writable.
 
 standard brainfuck files:
@@ -60,9 +60,9 @@ run last compiled file:
 ## Todo (in case I'm bored again)
 
 * Feature parity on all language templates:
-** universal input in Python
-** input in PHP
-** unlimited memory in C
+  - universal input in Python
+  - input in PHP
+  - unlimited memory in C
 * Code cleanup
 * More optimizations if I find any
 
