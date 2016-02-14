@@ -4,4 +4,8 @@
 .settings
 .pydevproject
 
+# python
 __pycache__
+
+# project
+pybf.py
