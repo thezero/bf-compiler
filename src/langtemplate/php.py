@@ -113,7 +113,10 @@ class Php():
             elif 92 == char:
                 out += '\\\\'
             else:
-                out += chr(char)
+                printed = chr(char)
+                if '"' == printed:
+                    printed = '\\"'
+                out += printed
         out += '"'
         self.code.write('echo ' + out + ';')
 

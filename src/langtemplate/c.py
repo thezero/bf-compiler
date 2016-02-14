@@ -114,7 +114,10 @@ class C():
                 out += '%c'
                 params += ', ' + str(char)
             else:
-                out += chr(char)
+                printed = chr(char)
+                if '"' == printed:
+                    printed = '\\"'
+                out += printed
         out += '"'
         self.code.write('printf(' + out + params + ');')
 

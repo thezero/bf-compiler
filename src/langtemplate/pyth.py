@@ -110,7 +110,10 @@ class Pyth():
             elif char < 32:
                 out += '" + chr(' + str(char) + ') + "'
             else:
-                out += chr(char)
+                printed = chr(char)
+                if '"' == printed:
+                    printed = '\\"'
+                out += printed
         out += '"'
         if 10 == chars[-1] or 13 == chars[-1]:
             out = out[:-3] + '"'
