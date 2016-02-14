@@ -131,17 +131,18 @@ class Container(Token):
 
                 token = token.next
 
-            self.changeWithinBoundaryMax = maxChange
-            self.changeWithinBoundaryMin = minChange
-            self.changeWithinBoundaryOff = offset
-            if offset == 0 and self.simple:
-                self.changeWithinBoundary = True
-            elif offset > 0 and offset > maxChange:
-                self.changeWithinBoundary = True
-            elif offset < 0 and offset < minChange:
-                self.changeWithinBoundary = True
-            else:
-                self.changeWithinBoundary = False
+            if False != self.changeWithinBoundary:
+                self.changeWithinBoundaryMax = maxChange
+                self.changeWithinBoundaryMin = minChange
+                self.changeWithinBoundaryOff = offset
+                if offset == 0 and self.simple:
+                    self.changeWithinBoundary = True
+                elif offset > 0 and offset > maxChange:
+                    self.changeWithinBoundary = True
+                elif offset < 0 and offset < minChange:
+                    self.changeWithinBoundary = True
+                else:
+                    self.changeWithinBoundary = False
 
         return self.changeWithinBoundary
 
